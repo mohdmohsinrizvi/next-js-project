@@ -11,7 +11,7 @@ export default function Footer() {
           <nav>
             <ul className="flex space-x-4">
               <li><Link href="#gallery" className="hover:text-gold transition duration-300">Our Moments</Link></li>
-              <li><Link href="#beauty" className="hover:text-gold transition duration-300">Aradhya's Beauty</Link></li>
+              <li><Link href="#beauty" className="hover:text-gold transition duration-300">Aradhya&apos;s Beauty</Link></li>
               <li><Link href="#love-story" className="hover:text-gold transition duration-300">Our Love Story</Link></li>
               <li><Link href="#message-board" className="hover:text-gold transition duration-300">Love Notes</Link></li>
             </ul>
