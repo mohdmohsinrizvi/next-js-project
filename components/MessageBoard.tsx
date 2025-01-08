@@ -1,4 +1,4 @@
-'use client'
+ 'use client'
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
@@ -11,7 +11,7 @@ export default function MessageBoard() {
   ])
   const [newMessage, setNewMessage] = useState({ author: '', content: '' })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (newMessage.author && newMessage.content) {
       setMessages([...messages, newMessage])
@@ -73,4 +73,3 @@ export default function MessageBoard() {
     </section>
   )
 }
-
