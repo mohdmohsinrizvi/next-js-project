@@ -1,4 +1,4 @@
-'use client'
+     'use client'
 
 import { useState } from 'react'
 import Image from 'next/image'
@@ -14,7 +14,8 @@ const images = [
 ]
 
 export default function Gallery() {
-  const [selectedImage, setSelectedImage] = useState(null)
+  // Define the type for selectedImage state
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null)
 
   return (
     <section id="gallery" className="py-20 bg-gray-800">
@@ -28,7 +29,7 @@ export default function Gallery() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative aspect-w-4 aspect-h-3 cursor-pointer"
-              onClick={() => setSelectedImage(image)}
+              onClick={() => setSelectedImage(image)} // Update the state to hold the selected image
             >
               <Image
                 src={image.src}
@@ -42,7 +43,10 @@ export default function Gallery() {
         </div>
       </div>
       {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50" onClick={() => setSelectedImage(null)}>
+        <div
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
+          onClick={() => setSelectedImage(null)} // Close the modal when clicked
+        >
           <div className="relative max-w-4xl max-h-full">
             <Image
               src={selectedImage.src}
@@ -53,7 +57,7 @@ export default function Gallery() {
             />
             <button
               className="absolute top-4 right-4 text-white text-2xl"
-              onClick={() => setSelectedImage(null)}
+              onClick={() => setSelectedImage(null)} // Close the modal
             >
               &times;
             </button>
@@ -63,4 +67,3 @@ export default function Gallery() {
     </section>
   )
 }
-
