@@ -15,7 +15,7 @@ export default function Header() {
           <nav className="hidden md:block">
             <ul className="flex space-x-6">
               <li><Link href="#gallery" className="hover:text-gold transition duration-300">Our Moments</Link></li>
-              <li><Link href="#beauty" className="hover:text-gold transition duration-300">Aradhya's Beauty</Link></li>
+              <li><Link href="#beauty" className="hover:text-gold transition duration-300">Aradhya&apos;s Beauty</Link></li>
               <li><Link href="#love-story" className="hover:text-gold transition duration-300">Our Love Story</Link></li>
               <li><Link href="#message-board" className="hover:text-gold transition duration-300">Love Notes</Link></li>
             </ul>
@@ -38,7 +38,7 @@ export default function Header() {
           <nav>
             <ul className="flex flex-col items-center space-y-4">
               <li><Link href="#gallery" onClick={() => setIsOpen(false)} className="hover:text-gold transition duration-300">Our Moments</Link></li>
-              <li><Link href="#beauty" onClick={() => setIsOpen(false)} className="hover:text-gold transition duration-300">Aradhya's Beauty</Link></li>
+              <li><Link href="#beauty" onClick={() => setIsOpen(false)} className="hover:text-gold transition duration-300">Aradhya&apos;s Beauty</Link></li>
               <li><Link href="#love-story" onClick={() => setIsOpen(false)} className="hover:text-gold transition duration-300">Our Love Story</Link></li>
               <li><Link href="#message-board" onClick={() => setIsOpen(false)} className="hover:text-gold transition duration-300">Love Notes</Link></li>
             </ul>
